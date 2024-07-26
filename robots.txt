@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.editorconfig
+Disallow: /.gitignore
