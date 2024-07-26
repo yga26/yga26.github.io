@@ -1,0 +1,143 @@
+@import url("/style/normalize.css");
+@import url("/style/variables.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .25rem 1.8rem;
+}
+
+.navbar__title, .navbar__title a {
+  color: var(--fg-1);
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.navbar__title a {
+  text-decoration: none;
+}
+
+.navbar__title {
+  text-decoration-line: underline;
+  text-decoration-color: var(--fg-1);
+  text-decoration-style: solid;
+  text-decoration-thickness: 4px;
+}
+
+.navbar__links {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: .8rem 2.1rem;
+
+  position: absolute;
+  top: calc(1.25rem + 45px);
+  right: 1.75rem;
+  border: 3px solid var(--fg-1);
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+.navbar .hamburger--active ~ .navbar__links {
+  display: flex;
+}
+
+.navbar__link a, .navbar__link {
+  color: var(--fg-2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar__link:hover a {
+  color: var(--fg-1);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.hamburger {
+  display: flex;
+  width: 35px;
+  justify-content: space-between;
+  align-items: end;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger > span {
+  border-radius: 8px;
+  display: inline-block;
+  height: 5px;
+  background-color: var(--fg-1);
+  transition: 0.3s;
+}
+
+.hamburger > span:nth-child(1) {
+  width: 70%;
+}
+
+.hamburger > span:nth-child(2) {
+  width: 100%;
+}
+
+.hamburger > span:nth-child(3) {
+  width: 80%;
+}
+
+.hamburger.hamburger--active > span:nth-child(1) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: rotatez(-45deg) translate(-4px,0px);
+}
+
+.hamburger.hamburger--active > span:nth-child(2) {
+  transform-origin: top;
+  width: 100%;
+  transform: rotatez(45deg);
+}
+
+.hamburger.hamburger--active > span:nth-child(3) {
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(-16px,-5px) rotatez(-45deg);
+}
+
+@media screen and (min-width: 729px) {
+  .navbar {
+    padding: .25rem 4.25rem;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  .navbar__title {
+    display: block;
+  }
+
+  .navbar__links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    border: 0;
+    gap: 2.15rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .navbar {
+    padding: .25rem 12.25rem;
+  }
+
+  .navbar__links {
+    gap: 3.55rem;
+  }
+}

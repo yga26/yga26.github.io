@@ -1,0 +1,9 @@
+* {
+    --color-plain-black-1: #0f121c;
+    --color-plain-gray-1: #333642;
+    --color-plain-white-1: #d3d5db;
+    --color-plain-yellow-1: ;
+    --bg-1: var(--color-plain-white-1);
+    --fg-1: var(--color-plain-black-1);
+    --fg-2: var(--color-plain-gray-1);
+}
