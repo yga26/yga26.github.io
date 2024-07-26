@@ -1,0 +1,21 @@
+{
+  "name": "yga26.github.io",
+  "version": "0.1.0",
+  "description": "My personal website repository",
+  "scripts": {
+    "serve": "http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yga26/yga26.github.io.git"
+  },
+  "author": "Yoga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yga26/yga26.github.io/issues"
+  },
+  "homepage": "https://github.com/yga26/yga26.github.io#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
